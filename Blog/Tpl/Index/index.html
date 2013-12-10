@@ -1,0 +1,24 @@
+<include file="Public:header" />
+<div class="main">
+	<div class="container">	
+		<div class="row">	
+			<h3>文章列表：</h3>		
+			<volist name="posts" id="vo">
+				<div class="row" style="margin-bottom:10px;">
+					<div class="col-md-8">
+						<a href="/User/view/id/{$vo.id}">{$vo.title}</a> <span class="author">[{$vo.author}]</span>
+					</div>
+					<div class="col-md-3 col-md-offset-1 text-right">
+						<span class="time">{$vo.create_time}</span>
+					</div>	
+				</div>
+			</volist>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 col-md-offset-4"><div class="pagination">{$page}</div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<include file="Public:footer" />
